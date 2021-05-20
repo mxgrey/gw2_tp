@@ -1,0 +1,17 @@
+"iron ore":
+  post_id: 19699
+
+"lump of coal":
+  post_id: 19750
+  vendor: 16
+
+"iron ingot":
+  post_id: 19683
+  recipes:
+    - "iron ore": 3
+
+"steel ingot":
+  post_id: 19688
+  recipes:
+    - "iron ore": 3
+      "lump of coal": 1
