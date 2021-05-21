@@ -1,6 +1,10 @@
+#[macro_use]
+extern crate serde_derive;
+
 use std::collections::HashMap;
 
 mod descriptions;
+mod tp_rest;
 
 use descriptions::MaterialDescription;
 
@@ -50,12 +54,24 @@ fn main() {
         serde_yaml::from_reader(material_descriptions_file).unwrap();
 
     let mut descriptions = HashMap::<String, MaterialDescription>::new();
-    for (material, description) in descriptions_yaml.into_iter() {
+    for (material, description) in &descriptions_yaml {
         descriptions.insert(
             material.as_str().unwrap().to_string(),
             MaterialDescription::new(&description)
         );
     }
 
+    let target_materials: Vec<String> =
+        serde_yaml::from_reader(
+            std::fs::File::open(
+                std::path::Path::new(&target_materials_file_name)
+            ).unwrap()
+        ).unwrap();
+
+    println!("Target materials: {:?}", target_materials);
+
     println!("Parsed result:\n{:?}", descriptions);
+
+    let listings = tp_rest::get_listings(&descriptions);
+    println!("\n\nLISTINGS:\n{:?}", listings);
 }

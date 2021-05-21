@@ -15,3 +15,34 @@
   recipes:
     - "iron ore": 3
       "lump of coal": 1
+
+"platinum ore":
+  post_id: 19702
+
+"lump of primordium":
+  post_id: 19924
+  vendor: 48
+
+"darksteel ingot":
+  post_id: 19681
+  recipes:
+    - "platinum ore": 2
+      "lump of primordium": 1
+
+"mithril ingot":
+  post_id: 19684
+  recipes:
+    - "mithril ore": 2
+
+"glob of ectoplasm":
+  post_id: 19721
+
+"thermocatalytic reagent":
+  post_id: 46747
+  vendor: 150
+
+"lump of mithrillium":
+  recipes:
+    - "mithril ingot": 50
+      "glob of ectoplasm": 1
+      "thermocatalytic reagent": 10
