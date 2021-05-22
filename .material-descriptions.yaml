@@ -29,6 +29,9 @@
     - "platinum ore": 2
       "lump of primordium": 1
 
+"mithril ore":
+  post_id: 19700
+
 "mithril ingot":
   post_id: 19684
   recipes:
@@ -46,3 +49,11 @@
     - "mithril ingot": 50
       "glob of ectoplasm": 1
       "thermocatalytic reagent": 10
+
+"deldrimor steel ingot":
+  post_id: 46738
+  recipes:
+    - "iron ingot": 20
+      "steel ingot": 10
+      "darksteel ingot": 20
+      "lump of mithrillium": 1

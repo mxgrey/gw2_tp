@@ -5,6 +5,7 @@ use std::collections::HashMap;
 
 mod descriptions;
 mod tp_rest;
+mod planning;
 
 use descriptions::MaterialDescription;
 
@@ -72,6 +73,19 @@ fn main() {
 
     println!("Parsed result:\n{:?}", descriptions);
 
-    let listings = tp_rest::get_listings(&descriptions);
-    println!("\n\nLISTINGS:\n{:?}", listings);
+    let listings = tp_rest::get_listings_for_targets(
+        target_materials.clone(),
+        &descriptions
+    );
+
+    println!("\nPrices:");
+    for (name, item) in &listings {
+        println!(
+            "{} lowest price: {}",
+            name,
+            item.sells().get(0).unwrap().unit_price()
+        );
+    }
+
+    planning::plan(&target_materials, descriptions, &listings);
 }

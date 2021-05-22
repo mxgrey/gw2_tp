@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::collections::BTreeMap;
 
-#[derive(Debug)]
+#[derive(Clone,Debug)]
 pub struct MaterialDescription {
     post_id: Option<u32>,
     vendor: Option<u32>,
