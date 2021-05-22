@@ -87,5 +87,9 @@ fn main() {
         );
     }
 
-    planning::plan(&target_materials, descriptions, &listings);
+    for target in &target_materials {
+        planning::plan_isolated(target, descriptions.clone(), &listings);
+    }
+
+    // planning::plan(&target_materials, descriptions, &listings);
 }

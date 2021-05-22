@@ -385,3 +385,13 @@ pub fn plan(
 
     return false;
 }
+
+pub fn plan_isolated(
+    target: &String,
+    descriptions: HashMap<String, MaterialDescription>,
+    listings: &HashMap<String, Item>
+) -> bool {
+    let mut targets = Vec::<String>::new();
+    targets.push(target.clone());
+    return plan(&targets, descriptions, listings);
+}
