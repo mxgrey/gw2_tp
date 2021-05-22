@@ -57,3 +57,96 @@
       "steel ingot": 10
       "darksteel ingot": 20
       "lump of mithrillium": 1
+
+"elonian leather square":
+  recipes:
+    - "cured thin leather square": 20
+      "cured coarse leather square": 10
+      "cured rugged leather square": 20
+      "spool of thick elonian cord": 1
+  post_id: 46739
+
+"cured thin leather square":
+  recipes:
+    - "thin leather section": 2
+  post_id: 19733
+
+"thin leather section":
+  post_id: 19728
+
+"cured coarse leather square":
+  recipes:
+    - "coarse leather section": 2
+  post_id: 19734
+
+"coarse leather section":
+  post_id: 19730
+
+"cured rugged leather square":
+  recipes:
+    - "rugged leather section": 2
+  post_id: 19736
+
+"rugged leather section":
+  post_id: 19731
+
+"spool of thick elonian cord":
+  recipes:
+    - "cured thick leather square": 50
+      "glob of ectoplasm": 1
+      "thermocatalytic reagent": 10
+
+"cured thick leather square":
+  recipes:
+    - "thick leather section": 4
+  post_id: 19735
+
+"thick leather section":
+  post_id: 19729
+
+"spiritwood plank":
+  recipes:
+    - "soft wood plank": 20
+      "seasoned wood plank": 10
+      "hard wood plank": 20
+      "glob of elder spirit residue": 1
+  post_id: 46736
+
+"soft wood plank":
+  recipes:
+    - "soft wood log": 2
+  post_id: 19713
+
+"soft wood log":
+  post_id: 19726
+
+"seasoned wood plank":
+  recipes:
+    - "seasoned wood log": 3
+  post_id: 19714
+
+"seasoned wood log":
+  post_id: 19727
+
+"hard wood plank":
+  recipes:
+    - "hard wood log": 3
+  post_id: 19711
+
+"hard wood log":
+  post_id: 19724
+
+"glob of elder spirit residue":
+  recipes:
+    - "elder wood plank": 50
+      "glob of ectoplasm": 1
+      "thermocatalytic reagent": 10
+  post_id: 46744
+
+"elder wood plank":
+  recipes:
+    - "elder wood log": 3
+  post_id: 19709
+
+"elder wood log":
+  post_id: 19722
